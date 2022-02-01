@@ -1,0 +1,86 @@
+<section class="m-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+
+				<form class="row formViews" [formGroup]="addAddChildForm">
+					<h4 class="headingText p-5">Add new Child Form</h4>
+					<div class="col-md-6 mb-3">
+						<label for="firstName" class="form-label">First Name</label>
+						<input type="text" formControlName="firstName" class="form-control" id="firstName" >
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="surName" class="form-label">Sur Name</label>
+						<input type="text" formControlName="surName" class="form-control" id="surName" >
+					</div>
+
+
+					<div class="col-md-6 mb-3">
+						<label for="knownAs" class="form-label">Middle Name</label>
+						<input type="text" class="form-control" id="knownAs" formControlName="knownAs">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="sex" class="form-label">Gender</label>
+						<select  class="form-control" id="sex" formControlName="sex">
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
+						
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="dateOfBirth" class="form-label">Date Of Birth</label>
+						<input type="date" class="form-control" id="dateOfBirth"  formControlName="dateOfBirth">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="placeOfBirth" class="form-label">Place Of Birth</label>
+						<input type="text" class="form-control" id="placeOfBirth"  formControlName="placeOfBirth">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="studyPath" class="form-label">Study Path</label>
+						<input type="text" class="form-control" id="studyPath"  formControlName="studyPath">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="legalRep" class="form-label">Legal Rep</label>
+						<input type="text" class="form-control" id="legalRep"  formControlName="legalRep">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="region" class="form-label">Region</label>
+						<input list="regionFilter" class="form-control" id="region"  formControlName="region">
+						<datalist id="regionFilter">
+							<option *ngFor="let item of getRegions" [value]="item.name">{{item.name}}</option>
+						</datalist>
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="foundRelinguished" class="form-label">Found Relinguished</label>
+						<input type="date" class="form-control" id="foundRelinguished"  formControlName="foundRelinguished">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="intake" class="form-label">Intake</label>
+						<input type="date" class="form-control" id="intake"  formControlName="intake">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="photoPath" class="form-label">Image</label>
+						<input type="file" accept="image/*" (change)="onFileChange($event)" class="form-control" id="photoPath" formControlName="photoPath">
+					</div>
+
+					<div class="col-md-6 mb-3 mt-4">
+						<button class="btn btn-info mt-1" (click)="Onsubmitted()" [disabled]="!addAddChildForm.valid">Submit Form</button>
+					</div>
+
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</section>
+

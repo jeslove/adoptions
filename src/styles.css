@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+
+
+
+
+
+::-webkit-scrollbar {
+	width:10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 3px grey; 
+	border-radius:5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #9ecef0; 
+	border-radius:5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #9ecef0; 
+}
+
+.ng-invalid .ng-touched{
+	border: 1px solid #f13524;
+}
+
+.ng-touched .ng-valid{
+	border: 1px solid green;
+}
+.navbar-search{
+	border-radius: 20px;
+}
+button{
+	border-radius: 0px !important;
+}
+
+
+.card{
+	border-radius: 0 !important;
+}
+
+input , select ,textarea {
+	border-radius: 0 !important;
+}
+
+table{
+	border-radius: 0 !important;
+}
+
+.modal-header{
+	border-radius: 0px !important;
+}
+.modal-content{
+	border-radius: 0px !important;
+}
+
+@media (min-width: 768px) {
+	.modal-xl {
+	  width: 90%;
+	 max-width:1200px;
+	 margin-right: 100px !important;
+	}
+}
+
+.bgmember{
+	background-color: #2a9d8f;
+}
+.bgmember2{
+	background-color: #264653;
+}
+.bgmember3{
+	background-color: #e9c46a;
+}
+.bgmember4{
+	background-color: #f4a261;
+}
+.bgmember5{
+	background-color: #e76f51;
+}
+
+.bgmember6{
+	background-color: #3998e663;
+	/* color: #cad2c596; */
+}
+
+.formViews{
+	padding:15;
+	background-color: rgb(231, 231, 231);
+}
+
+label{
+	font-size: 13px;
+	color: rgb(109, 109, 109);
+}
+.headingText{
+	text-align: center;
+	padding: 5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:35px;
+}

@@ -1,0 +1,76 @@
+<section class="mt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+
+				<form class="row formViews" [formGroup]="addAdoptionForm">
+					<h4 class="headingText p-5">Adoption Form</h4>
+					<div class="col-md-6 mb-3">
+						<label for="applyCode" class="form-label">Application Code</label>
+						<input type="text" formControlName="applyCode" class="form-control" id="applyCode" placeholder="apply Code ...">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="country" class="form-label">Country</label>
+						<input type="text" formControlName="country" class="form-control" id="country" placeholder="country ....">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="adoptionGroup" class="form-label">Adoption Group</label>
+						<select  class="form-control" id="adoptionGroup" formControlName="adoptionGroup">
+							<option value=""></option>
+						</select>
+						
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="adoptionCategory" class="form-label">Adoption Category</label>
+						<select  class="form-control" id="adoptionCategory" formControlName="adoptionCategory">
+							<option value=""></option>
+						</select>
+						
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="adoptionType" class="form-label">Adoption Type</label>
+						<select  class="form-control" id="adoptionType" formControlName="adoptionType">
+							<option value=""></option>
+						</select>
+						
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="mindAge" class="form-label">Minimum Age</label>
+						<input type="number" class="form-control" id="mindAge" formControlName="mindAge">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="maxdAge" class="form-label">Maxmum Age</label>
+						<input type="number" class="form-control" id="maxdAge" formControlName="maxdAge">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="childXtics" class="form-label">Child Xtics</label>
+						<input type="text" class="form-control" id="childXtics" placeholder="Child Xtics..." formControlName="childXtics">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="preferedSex" class="form-label">Prefered Sex</label>
+						<select  id="preferedSex" class="form-control" formControlName="preferedSex">
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
+					</div>
+
+					<div class="col-md-6 mb-3 mt-4">
+						<button class="btn btn-info mt-1" (click)="Onsubmitted()" [disabled]="!addAdoptionForm.valid">Submit Form</button>
+					</div>
+
+					
+
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</section>

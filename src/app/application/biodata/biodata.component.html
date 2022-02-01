@@ -1,0 +1,54 @@
+<section class="m-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+
+				<form class="row formViews" [formGroup]="addbiodataForm">
+					<h4 class="headingText p-5">Applicant Biodata Form</h4>
+
+					<div class="col-md-6 mb-3">
+						<label for="appFName" class="form-label">Applicant First Name</label>
+						<input type="text" formControlName="appFName" class="form-control" id="appFName" >
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="surName" class="form-label">Applicant Last Name</label>
+						<input type="text" formControlName="surName" class="form-control" id="surName" >
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="fullName" class="form-label">FullName</label>
+						<input type="text" formControlName="fullName" class="form-control" id="fullName" >
+					</div>
+
+
+					<div class="col-md-6 mb-3">
+						<label for="appGender" class="form-label">Applecant Gender</label>
+						<select  class="form-control" id="appGender" formControlName="appGender">
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
+						
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="dateofBirth" class="form-label">Date Of Birth</label>
+						<input type="date" formControlName="dateofBirth" class="form-control" id="dateofBirth" >
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="user" class="form-label">User</label>
+						<input type="text" class="form-control" id="user" formControlName="user">
+					</div>
+
+					<div class="col-md-6 mb-3 mt-4">
+						<button class="btn btn-info mt-1" (click)="Onsubmitted()" [disabled]="!addbiodataForm.valid">Submit Form</button>
+					</div>
+
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</section>
+

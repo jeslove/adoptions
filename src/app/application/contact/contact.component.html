@@ -1,0 +1,81 @@
+<section class="m-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+
+				<form class="row formViews" [formGroup]="addApplicanteContactForm">
+					<h4 class="headingText p-5">Applicant Contact Form</h4>
+					<div class="col-md-6 mb-3">
+						<label for="nationality" class="form-label">Nationality</label>
+						<input type="text" formControlName="nationality" class="form-control" id="nationality" >
+					</div>
+
+
+					<div class="col-md-6 mb-3">
+						<label for="nationalIdType" class="form-label">NationalId Type</label>
+						<input list="nationalTDY" formControlName="nationalIdType" class="form-control" id="nationalIdType">
+						<datalist id="nationalTDY">
+							<option value="DVLA">Driver's License</option>
+							<option value="Passport">Passport</option>
+							<option value="NHIS">Health Insurance</option>
+							<option value="VOTERSID">Voter's ID</option>
+							<option value="NATIONALID">National ID</option>
+							<option value="SSNIT">SSNIT</option>
+						</datalist>
+						<!-- <select  class="form-control" id="nationalIdType" formControlName="nationalIdType">
+							
+						</select> -->
+						
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="nationalIdNo" class="form-label">NationalId Number</label>
+						<input type="text" formControlName="nationalIdNo" class="form-control" id="nationalIdNo" >
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="liveOutSideGhana" class="form-label">Live Out Side Ghana</label>
+						<select  class="form-control" id="liveOutSideGhana" formControlName="liveOutSideGhana">
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+						</select>
+						
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="placeOfResidence" class="form-label">Place Of Residence</label>
+						<input type="text" class="form-control" id="placeOfResidence" formControlName="placeOfResidence">
+					</div>
+
+
+					<div class="col-md-6 mb-3">
+						<label for="residenceaddress" class="form-label">Residence Address</label>
+						<input type="text" class="form-control" id="residenceaddress"  formControlName="residenceaddress">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="postalAddress" class="form-label">Postal Address</label>
+						<input type="text" class="form-control" id="postalAddress"  formControlName="postalAddress">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="contactNo" class="form-label">Contact Number</label>
+						<input type="text" class="form-control" id="contactNo"  formControlName="contactNo">
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label for="emailAddres" class="form-label">Email Addres</label>
+						<input type="email" class="form-control" id="emailAddres"  formControlName="emailAddres">
+					</div>
+
+
+					<div class="col-md-6 mb-3 mt-4">
+						<button class="btn btn-info mt-1" (click)="Onsubmitted()" [disabled]="!addApplicanteContactForm.valid">Submit Form</button>
+					</div>
+
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</section>
